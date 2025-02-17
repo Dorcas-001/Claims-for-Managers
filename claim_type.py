@@ -175,7 +175,6 @@ def display_claim_type():
         selected_months = st.multiselect(
             "Select Months",
             options=sorted_months,
-            default=["January"],  # Default to January
             key="month_selector_multiselector"
         )
         if selected_months:
@@ -193,7 +192,6 @@ def display_claim_type():
         selected_quarters = st.multiselect(
             "Select Quarters",
             options=quarters,
-            default=suggested_quarters,  # Pre-select quarters based on selected months
             key="filter_quarter_multi"
         )
         if selected_quarters:
@@ -205,7 +203,6 @@ def display_claim_type():
         selected_business_lines = st.multiselect(
             "Select Business Lines",
             options=business_lines,
-            default=business_lines,  # Pre-select all business lines by default
             key="filter_business_line_multi"
         )
         if selected_business_lines:
@@ -246,7 +243,6 @@ def display_claim_type():
             selected_business_lines = st.multiselect(
                 "Select Claim Status",
                 options=business_lines,
-                default=[business_lines[0]] if business_lines else None,  # Default to the first status if available
                 key="status_select_multiselect"
             )
             
@@ -263,7 +259,7 @@ def display_claim_type():
             selected_business_lines = st.multiselect(
                 "Select Claim Type",
                 options=business_lines,
-                key="type_select_multiselect"
+                key="type_select_multisect"
             )
             
             # Apply filter for Claim Status
